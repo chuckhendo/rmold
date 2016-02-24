@@ -1,6 +1,5 @@
 {
   "name": "rmold",
-  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -8,7 +7,8 @@
   },
   "scripts": {
     "test": "eslint index.js",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "author": "",
   "license": "ISC",
@@ -24,7 +24,8 @@
     "cz-conventional-changelog": "^1.1.5",
     "eslint": "^2.2.0",
     "ghooks": "^1.0.3",
-    "validate-commit-msg": "^2.1.0"
+    "validate-commit-msg": "^2.1.0",
+    "semantic-release": "^4.3.5"
   },
   "repository": {
     "url": "https://github.com/chuckhendo/rmold"
