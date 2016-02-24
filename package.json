@@ -1,0 +1,56 @@
+{
+  "name": "rmold",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "rmold": "index.js"
+  },
+  "scripts": {
+    "test": "eslint index.js",
+    "commit": "git-cz"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.11.2",
+    "rimraf": "^2.5.2",
+    "yargs": "^4.1.0"
+  },
+  "devDependencies": {
+    "@unumux/eslint-config-unumux": "^1.0.1",
+    "babel-eslint": "^5.0.0",
+    "commitizen": "^2.5.0",
+    "cz-conventional-changelog": "^1.1.5",
+    "eslint": "^2.2.0",
+    "ghooks": "^1.0.3",
+    "validate-commit-msg": "^2.1.0"
+  },
+  "repository": {
+    "url": "https://github.com/chuckhendo/rmold"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "npm test",
+      "commit-msg": "validate-commit-msg"
+    },
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "chore",
+        "revert"
+      ],
+      "warnOnFail": false,
+      "maxSubjectLength": 100
+    }
+  }
+}
